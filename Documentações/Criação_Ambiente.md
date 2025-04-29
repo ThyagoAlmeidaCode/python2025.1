@@ -12,7 +12,7 @@ Para instalar o Python no Windows, basta acessar o [site oficial](https://www.py
 
 Lembre-se de executar o instalador como administrador e marcar a opção "Adicionar Python 3.x ao PATH".
 
-![Instalação do Python no Windows](imgs/assistente-instalacao-python-windows.png)
+![Instalação do Python no Windows](../imgs/assistente-instalacao-python-windows.png)
 
 Para verificar se a instalação foi bem sucedida, abra o terminal e execute o comando `python --version`. O resultado deve ser a versão do Python instalada.
 
