@@ -16,5 +16,3 @@ for contado in range(20):
 caixa_frutas = ["Maçã","Pera","Melancia"]
 for fruta in caixa_frutas:
     print(f"A fruta é: {fruta}")
-
-
