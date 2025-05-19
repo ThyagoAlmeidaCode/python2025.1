@@ -11,7 +11,12 @@ def calculadora(valor_um,valor_dois,operador):
         resultado = valor_um * valor_dois
         return resultado
     elif operador == "/":
-        resultado = valor_um / valor_dois
+        if valor_dois == 0:
+            print("Não é possivel divisão por zero.")
+        else:
+            resultado = valor_um / valor_dois
+            #Faltou o ruturn do resultado
+            return resultado
     else:
         resultado = "Operação inválida"
         return resultado
