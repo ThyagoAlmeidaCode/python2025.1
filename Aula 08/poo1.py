@@ -4,7 +4,6 @@ class Cachorro:
     raca = ""
     nome = ""
     idade = 0
-
     #Métodos (Funções metidas)
     def latir(self):
         print("Au Au!")
