@@ -64,8 +64,6 @@ Após a criação do projeto, você notará uma estrutura de diretórios e arqui
   - **settings.py**: Este é o arquivo de configurações do seu projeto. Ele contém todas as configurações importantes, como configurações de banco de dados, aplicativos instalados, fuso horário, etc. Você irá modificá-lo frequentemente.
   - **urls.py**: Este arquivo é onde você define o mapeamento de URLs para as views do seu projeto.
 
-### Criar e Registrar o Aplicativo (App)
-Em Django, a funcionalidade é organizada em "aplicativos" (apps). Para o seu projeto bancário, é uma boa prática criar um app específico para as funcionalidades do banco.
 
 ### Iniciar o Projeto
 Finalmente, você pode iniciar o servidor de desenvolvimento do Django para ver seu projeto em funcionamento.
