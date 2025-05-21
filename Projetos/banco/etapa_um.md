@@ -57,7 +57,7 @@ Após a criação do projeto, você notará uma estrutura de diretórios e arqui
 
 1. manage.py: Um utilitário de linha de comando que permite interagir com o seu projeto Django (executar o servidor, criar apps, migrar banco de dados, etc.).
 
-2. setup/: Este é o diretório principal do seu projeto Django.
+- 2. setup/: Este é o diretório principal do seu projeto Django.
 
  - __init__.py: Um arquivo vazio que indica ao Python que este diretório deve ser tratado como um pacote.
 
