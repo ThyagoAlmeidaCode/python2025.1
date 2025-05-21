@@ -67,33 +67,6 @@ Após a criação do projeto, você notará uma estrutura de diretórios e arqui
 ### Criar e Registrar o Aplicativo (App)
 Em Django, a funcionalidade é organizada em "aplicativos" (apps). Para o seu projeto bancário, é uma boa prática criar um app específico para as funcionalidades do banco.
 
-### Criar o Aplicativo banco:
-No terminal (ainda com o ambiente virtual ativado e no diretório raiz do projeto, onde manage.py está), execute:
-```
-python manage.py startapp banco
-```
-
-Isso criará uma nova pasta banco dentro do seu projeto, com sua própria estrutura de arquivos (models.py, views.py, etc.).
-
-### Registrar o Aplicativo:
-Após a criação, você precisa informar ao seu projeto Django que o novo aplicativo banco existe e deve ser incluído. Para fazer isso, edite o arquivo settings.py (localizado em setup/settings.py).
-
-Procure pela seção INSTALLED_APPS e adicione a linha 'banco.apps.BancoConfig' à lista:
-
-
-```
-# setup/settings.py
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'banco.apps.BancoConfig' # Adicione esta linha
-]
-```
-
 ### Iniciar o Projeto
 Finalmente, você pode iniciar o servidor de desenvolvimento do Django para ver seu projeto em funcionamento.
 
