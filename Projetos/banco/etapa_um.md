@@ -80,8 +80,9 @@ Após a criação, você precisa informar ao seu projeto Django que o novo aplic
 
 Procure pela seção INSTALLED_APPS e adicione a linha 'banco.apps.BancoConfig' à lista:
 
-# setup/settings.py
+
 ```
+# setup/settings.py
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
