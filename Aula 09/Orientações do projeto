@@ -1,3 +1,11 @@
+Desenvolvimento de um Sistema Bancário Simplificado com Django
+
+Visão Geral do Projeto
+    Nosso objetivo é construir um sistema bancário simplificado onde poderemos gerenciar clientes e suas contas bancárias. O projeto será desenvolvido incrementalmente, com cada aula adicionando novas funcionalidades e consolidando os conhecimentos de Django.
+
 1 - Criar uma pasta para o seu projeto
 2 - Abrir esta pasta dentro do vscode
 3 - Executar passo a passo que esta no github da turma-Aula 09/projetos/bancos/etapa_um
+
+23/05/2025
+1 - Executar a Etapa 03 atá a opção de registro de apps.
