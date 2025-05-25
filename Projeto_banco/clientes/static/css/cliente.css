@@ -1,0 +1,150 @@
+/* style.css */
+
+/* Reset básico */
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  /* Mantenha a fonte 'ADLaM Display' se você a tiver importado.
+     Caso contrário, use uma fonte padrão como 'Arial' ou 'sans-serif'. */
+  font-family: 'ADLaM Display', Arial, sans-serif;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+/* Barra superior (Barra Um) */
+.bar_um {
+  width: 100vw;
+  height: 10vh;
+  background-color: #242D40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar_um h1 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #C8C5D9;
+  font-family: "Arial", sans-serif; /* Adicionado sans-serif como fallback */
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* Barra de navegação (Barra Dois) */
+.bar_dois {
+  width: 100%;
+  height: 12vh;
+  background-color: #D9D0A3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bar_dois ul {
+  display: flex;
+  list-style: none; /* Remove os marcadores de lista */ 
+}
+
+.bar_dois ul li a {
+  text-decoration: none;
+  margin: 0 20px;
+  color: #8C5B3E;
+  font-family: "Arial", sans-serif; /* Adicionado sans-serif como fallback */
+  font-size: 20px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ### Seções Principais (Ajuste para Empilhamento) css */
+main {  
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza as sections horizontalmente */
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+}
+
+/* Estilos gerais para as sections dentro da main */
+main section {   
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: auto;  
+  font-family: "Arial";
+  margin: 1rem auto;
+}
+
+/* Estilos para o h2 dentro de main section */
+main section h2 {
+  color: #8C5B3E;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 2rem; /* Use em/rem para responsividade em relação ao tamanho da fonte base */
+}
+
+/* Estilos para o 'a' (link/botão) dentro de main section */
+main section a {  
+  display: flex;
+  justify-self: center;
+  align-items: center;  
+  width: auto; /* Largura fixa para o "botão" */
+  padding: 0.5rem ;  
+  margin: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #242D40;
+  color: #C8C5D9;
+  border-radius: 5px;
+  font-size: 1rem; /* Tamanho de fonte um pouco maior */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+main section a:hover {
+  background-color: #394357; /* Mudar a cor ao passar o mouse */
+}
+
+/* Estilos para a tabela */
+table {
+  width: 90vw; /* Define a largura da tabela, melhor usar porcentagem ou max-width */
+   /* Limita a largura máxima da tabela */
+  border-collapse: collapse; /* Colapsa as bordas das células */
+  margin: 2rem auto; /* Centraliza a tabela e adiciona margem superior/inferior */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a tabela */
+}
+
+th, td {
+  width: auto;
+  border: 1px solid #ddd; /* Adiciona bordas às células */
+  padding: 0.8rem; /* Adiciona preenchimento interno às células */
+  text-align: center; /* Alinha o texto à esquerda */
+}
+
+td a{
+  display: inline !important;
+  justify-content: center !important;
+  width: auto !important; /* Largura fixa para o "botão" */
+  padding: 0.5rem ;  
+  margin: 1rem;
+  color: #C8C5D9;
+  border-radius: 5px;
+  font-size: 0.8rem !important;  /* Tamanho de fonte um pouco maior */
+}
+
+th {
+  background-color: #A69B8D; /* Cor de fundo para os cabeçalhos */
+  color: #242D40;
+  text-align: center;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+}
