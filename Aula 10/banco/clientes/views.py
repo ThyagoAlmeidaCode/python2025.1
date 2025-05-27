@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import ListView
 #Aqui vai toda nossa logica
 
 #Função da quebra de maldição
@@ -13,4 +14,7 @@ def home(request):
     return render(request, 'clientes.html')
 
 
-#Desafio criar uma função chamada home que exiba uma mensagem dizendo. "AREA DO CLIENTE"
+class pagina_dois(ListView):
+    def get(self, request):
+        contexto = {'mensagem': 'Olá, mundo com classe!'}
+        return render(request, 'paginadois.html', contexto)
