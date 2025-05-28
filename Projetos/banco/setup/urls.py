@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
     
     #path da classe
-    path('', Clientes_list.as_view())
+   
+    path('', Clientes_list.as_view(),name="clientes")
 
 ]

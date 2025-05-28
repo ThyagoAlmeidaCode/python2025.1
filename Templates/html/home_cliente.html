@@ -1,34 +1,11 @@
+{% extends "base.html" %}
 
-    <section>
-        <div class="titulo"><h2>Clientes</h2></div>
-        <div ><a href="" class="botao">Cadastrar</a></div>
-    </section>
-    <section>
-        <table>
-            <tr>
-            <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>CPF</th>
-                <th>Data de Nascimento</th>
-                <th>Endereço</th>
-                <th>Telefone</th>
-                <th>Email</th>
-                <th>Açoes</th>
-            </tr>
-           
-            <tr>
-                <td>Marcelo</td>
-                <td>Serrano</td>
-                <td>12345678900</td>
-                <td>15/02/1978</td>
-                <td>Rua Lopes</td>
-                <td>(11) 99999-9999</td>
-                <td>G9M0r@example.com</td>
-            <td>
-                <a href="">Editar</a>
-                <a href="">Excluir</a>
-            </td>
-            </tr>
-           
-        </table>  
-    </section>
+
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<section>    
+    <a href="{% url 'clientes' %}" class="sou_cliente">Sou cliente</a>
+    <a href="" class="sou_cliente">Empréstimos</a>
+    <a href="" class="sou_cliente">Abra sua conta</a>
+</section>
+{% endblock %}

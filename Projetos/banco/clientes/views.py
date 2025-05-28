@@ -5,6 +5,7 @@ from django.views.generic import ListView #Listview - Lista os dados a partir de
 from .models import Cliente
 
 #Utilizando classes
+
 class Clientes_list(ListView):
     #a ferramenta listview permite (model,template_name)
     #Conecta ao modelo de banco de dados
@@ -12,6 +13,8 @@ class Clientes_list(ListView):
 
     #Conecta ao arquivo html do templates
     template_name = 'clientes/clientes_list.html'
+
+
 
 
 
