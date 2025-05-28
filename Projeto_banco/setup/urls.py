@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from clientes.views import Cliente_ListView
+from clientes.views import home, Cliente_ListView, BuscaCPFView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
     #class
-    path('', Cliente_ListView.as_view()),
+    path('', home.as_view(), name='home'),
+    path('clientes/', Cliente_ListView.as_view()),
+    path('buscar_cpf/', BuscaCPFView.as_view(), name='buscar_cpf')
 ]
