@@ -68,5 +68,5 @@ Nesta primeira etapa os grupos devems se reunir para:
 2. O arquivo HTML estilizado de acordo com o Moqups
 3. O projeto desenvolvido em Django utilizando tudo que vimos ate aqui:
 - Implementação dos Models
-- Criação do ambiente administrativo vom acesso ao modelo que o grupo criou
-- Implementação da pagina home conforme o desenvovlido no moqups utilizando herança de templates
+- Criação do ambiente administrativo com acesso ao modelo que o grupo criou
+- Implementação da pagina home conforme o desenvolvido no moqups utilizando herança de templates
