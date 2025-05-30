@@ -10,7 +10,7 @@ class Home(ListView):
     def get(self,request):
         return render(request, 'clientes/home_cliente.html')
 
-
+#Exibe a tabela
 class Clientes_list(ListView):
     #a ferramenta listview permite (model,template_name)
     #Conecta ao modelo de banco de dados

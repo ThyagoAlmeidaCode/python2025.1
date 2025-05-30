@@ -8,7 +8,8 @@
     <section>
         <table>
             <tr>
-            <th>Nome</th>
+                <th>ID:</th>
+                <th>Nome</th>
                 <th>Sobrenome</th>
                 <th>CPF</th>
                 <th>Data de Nascimento</th>
@@ -19,6 +20,7 @@
             </tr>
             {% for cliente in cliente_list %}
             <tr>
+                <td>{{cliente.id}}</td>
                 <td>{{cliente.nome}}</td>
                 <td>{{cliente.sobrenome}}</td>
                 <td>{{cliente.cpf}}</td>
@@ -28,7 +30,7 @@
                 <td>{{cliente.email}}</td>
             <td>
                 <a href="">Editar</a>
-                <a href="">Excluir</a>
+                <a href="">Excluir</a> 
             </td>
             </tr>
             {% endfor  %}
