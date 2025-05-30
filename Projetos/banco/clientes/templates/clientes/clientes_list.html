@@ -14,6 +14,7 @@
             <th>Sobrenome:</th>
             <th>CPF:</th>
             <th>Data Nascimento:</th>
+            <th>Email:</th>
         </tr>
         <!-- Usando o for dentro do html  -->
         {% for cliente in cliente_list %}
@@ -21,7 +22,9 @@
             <td>{{cliente.nome}}</td>
             <td>{{cliente.sobrenome}}</td>
             <td>{{cliente.cpf}}</td>
-            <td>{{cliente.data_nascimento}}</td>            
+            <td>{{cliente.data_nascimento}}</td>
+            <td>{{cliente.email}}</td>
+                     
         </tr>
         {% endfor %}
 

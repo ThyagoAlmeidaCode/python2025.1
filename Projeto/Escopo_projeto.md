@@ -57,3 +57,16 @@ Desenvolver um projeto web utilizando o framework Django, proporcionando aos alu
 6. Buscar por posts.
 
 # Outros exemplos estão no teamns da turma
+
+# Etapa 01 - Entregas de Hoje 
+Nesta primeira etapa os grupos devems se reunir para: 
+- **Desenvolver o Models**
+- **Desenvolveer o protótipo de homepage no moqups**
+
+## Primeira Entrega: 
+1. O arquivo do models em python
+2. O arquivo HTML estilizado de acordo com o Moqups
+3. O projeto desenvolvido em Django utilizando tudo que vimos ate aqui:
+- Implementação dos Models
+- Criação do ambiente administrativo vom acesso ao modelo que o grupo criou
+- Implementação da pagina home conforme o desenvovlido no moqups utilizando herança de templates
