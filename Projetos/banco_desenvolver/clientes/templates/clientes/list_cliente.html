@@ -28,7 +28,7 @@
                 <td>{{cliente.telefone}}</td>
                 <td>{{cliente.email}}</td>
             <td>
-                <a href="">Editar</a>
+                <a href="{% url 'update_cliente' cliente.id %}">Editar</a>
                 <a href="">Excluir</a>
             </td>
             </tr>

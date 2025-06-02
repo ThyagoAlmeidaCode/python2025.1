@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+<<<<<<< HEAD
 from clientes.views import home, Cliente_ListView, Cliente_CreateView
 from conta.views import Conta_List
 
+=======
+from clientes.views import home, Cliente_ListView, Cliente_CreateView, Cliente_UpdateView
+>>>>>>> 33ad5772fcc88c08a1e146afb1abba90c6678f28
 urlpatterns = [
     path('admin/', admin.site.urls),
     
@@ -27,7 +31,11 @@ urlpatterns = [
     path('', home.as_view(), name='home'),
     path('clientes/list/', Cliente_ListView.as_view(),name='list_cliente'),
     path('clientes/create/', Cliente_CreateView.as_view(),name='create_cliente'),
+<<<<<<< HEAD
 
     path('contas/ambiente_cliente/', Conta_List.as_view(), name="Conta" )
+=======
+    path('clientes/update/<int:pk>', Cliente_UpdateView.as_view(),name='update_cliente'),
+>>>>>>> 33ad5772fcc88c08a1e146afb1abba90c6678f28
     
 ]
