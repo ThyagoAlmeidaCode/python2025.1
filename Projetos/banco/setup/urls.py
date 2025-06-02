@@ -24,6 +24,7 @@ urlpatterns = [
     
     #path da classe
     path('', Home.as_view()),
-    path('cliente_tabela/', Clientes_list.as_view())
+    path('cliente_tabela/', Clientes_list.as_view(), name="cliente_tabela"),
+    
 
 ]

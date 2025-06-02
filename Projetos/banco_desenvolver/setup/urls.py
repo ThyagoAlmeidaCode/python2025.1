@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 
 from clientes.views import home, Cliente_ListView, Cliente_CreateView
+from conta.views import Conta_List
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     
@@ -25,5 +27,7 @@ urlpatterns = [
     path('', home.as_view(), name='home'),
     path('clientes/list/', Cliente_ListView.as_view(),name='list_cliente'),
     path('clientes/create/', Cliente_CreateView.as_view(),name='create_cliente'),
+
+    path('contas/ambiente_cliente/', Conta_List.as_view(), name="Conta" )
     
 ]

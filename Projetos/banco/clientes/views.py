@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView #Listview - Lista os dados a partir de uma classe
+from django.urls import reverse_lazy
 
 #Os arquivos precisam se conhecer
 from .models import Cliente
@@ -18,7 +19,6 @@ class Clientes_list(ListView):
 
     #Conecta ao arquivo html do templates
     template_name = 'clientes/list_cliente.html'
-
 
     """ def get(self,request):
         return render(request, 'clientes/clientes_list.html') """
