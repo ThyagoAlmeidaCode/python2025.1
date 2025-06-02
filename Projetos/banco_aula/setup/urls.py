@@ -16,15 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#Importar a função de views
+from clientes.views import Clientes_list
 
-from clientes.views import home, Cliente_ListView, Cliente_CreateView, Cliente_UpdateView
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),    
     
-    #class
-    path('', home.as_view(), name='home'),
-    path('clientes/list/', Cliente_ListView.as_view(),name='list_cliente'),
-    path('clientes/create/', Cliente_CreateView.as_view(),name='create_cliente'),
-    path('clientes/update/<int:pk>', Cliente_UpdateView.as_view(),name='update_cliente'),
-    
+    #path da classe
+   
+    path('', Clientes_list.as_view(),name="clientes")
+
 ]

@@ -90,6 +90,7 @@ main section h2 {
   font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: 2rem; /* Use em/rem para responsividade em relação ao tamanho da fonte base */
+  margin-bottom: -1rem;
 }
 
 /* Estilos para o 'a' (link/botão) dentro de main section */
@@ -153,7 +154,6 @@ tr:nth-child(even) {
   background-color: #f9f9f9; /* Cor de fundo para linhas pares */
 }
 
-
 /* CSS - Home PAGE */
 
 .sou_cliente{
@@ -177,55 +177,12 @@ tr:nth-child(even) {
 
 /* Formulario */
 
-.busca_cpf{
-  display:list-item;
-  flex-direction: column;
-
-  justify-content:space-between;
+form{
+  display: block;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   height: auto;
-  margin: 2rem auto;
+  margin: 1%;
   font-family: "Arial";
-  text-align: center;
-
-  h1{
-    color: #242D40;
-    font-family: "Arial";
-    font-weight: bold;
-    font-size: 2rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-}
-
-form{
-  display: block;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: left;  
-  width: 100vw;
-  height: 20vh;
-
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  
-  font-family: "Arial";
-  text-align: left;
-  font-size: 1rem;
-  color: #242D40;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-
-form button:hover {
-  background-color: #3c455a; /* Cor mais escura */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra maior */
-}
-
-/* Efeito ao clicar (active) */
-form button:active {
-  background-color: #3c455a; /* Cor ainda mais escura */
-  transform: translateY(2px); /* Move o botão ligeiramente para baixo */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra menor para dar a impressão de "pressionado" */
 }

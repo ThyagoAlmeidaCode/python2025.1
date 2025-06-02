@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from django.views.generic import ListView,CreateView
+from django.views.generic import ListView,CreateView,UpdateView
+from django.urls import reverse_lazy
+
+
 from .models import Cliente
 from .forms import ClienteForm
-from django.urls import reverse_lazy
-from conta.models import ContaBancaria
+
 
 #Pagina inicial
 class home(ListView):
@@ -16,10 +18,27 @@ class Cliente_ListView(ListView):
     context_object_name = 'clientes'
     
 class Cliente_CreateView(CreateView):
-    model = Cliente
+    model = Cliente    
+    template_name = 'clientes/forms_cliente.html'    
+    form_class = ClienteForm 
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['titulo'] = 'Cadastro de clientes'
+        context['botao'] = 'Cadastrar'
+        return context
+    
+    success_url = reverse_lazy('list_cliente')
+    
+class Cliente_UpdateView(UpdateView):
+    model = Cliente    
+    template_name = 'clientes/forms_cliente.html'    
     form_class = ClienteForm
     
-    template_name = 'clientes/forms_cliente.html'
-    success_url = reverse_lazy('list_cliente')
-    paginate_by = 2 # Define 10 itens por página
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['titulo'] = 'Edição de clientes'
+        context['botao'] = 'Salvar'
+        return context
     
+    success_url = reverse_lazy('list_cliente')

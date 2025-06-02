@@ -1,8 +1,5 @@
 from django import forms
 from .models import Cliente
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Submit, Row, Column
-
 class ClienteForm(forms.ModelForm):
     class Meta:
         model = Cliente
@@ -15,16 +12,6 @@ class ClienteForm(forms.ModelForm):
             'telefone',
             'email',
         ]
-
-        labels = {
-            'nome': 'Nome',
-            'sobrenome': 'Sobrenome', # Corrigido: 'Sobrenome' deve ser 'sobrenome' (minúsculo)
-            'cpf': 'CPF',
-            'data_nascimento': 'Data de Nascimento',
-            'endereco': 'Endereço',
-            'telefone': 'Telefone',
-            'email': 'Email',
-        }
 
         widgets = {
             "nome": forms.TextInput(attrs={"class": "form-control","placeholder": "Digite seu nome"}),
