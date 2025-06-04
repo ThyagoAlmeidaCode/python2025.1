@@ -17,14 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 #Importar a função de views
-from clientes.views import Clientes_list,Home
+from clientes.views import Clientes_list,Home,Cliente_Create
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
     
     #path da classe
     path('', Home.as_view()),
-    path('cliente_tabela/', Clientes_list.as_view(), name="cliente_tabela"),
-    
+    path('cliente_tabela/', Clientes_list.as_view(),name="table_lista"),
+    path('cliente_create/', Cliente_Create.as_view(),name="form_cadastro")
 
 ]
