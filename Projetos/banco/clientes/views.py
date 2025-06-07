@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView,CreateView,UpdateView #Listview - Lista os dados a partir de uma classe
+from django.views.generic import ListView,CreateView,UpdateView,DeleteView #Listview - Lista os dados a partir de uma classe
 from django.urls import reverse_lazy #O reverse_lazy redireciona para uma pagina
 #Os arquivos precisam se conhecer
 from .models import Cliente
@@ -16,6 +16,7 @@ class Listagem(ListView):
     #a ferramenta listview permite (model,template_name)
     model = Cliente #Conecta ao modelo de banco de dados, E Retorna uma lista chamamda cliente_list    
     template_name = 'clientes/list_cliente.html'#Conecta ao arquivo html do templates
+
 
 #Clase de cadastro
 class Cadastro(CreateView):
@@ -36,8 +37,7 @@ class Cadastro(CreateView):
 class Editar(UpdateView):
     model = Cliente
     form_class = ClienteForm
-    template_name = 'clientes/forms_cliente.html'
-    success_url = reverse_lazy('lista_cliente')
+    template_name = 'clientes/forms_cliente.html'   
     
     #Deixa dinamico dados no html
     def get_context_data(self, **kwargs):
@@ -46,3 +46,11 @@ class Editar(UpdateView):
         context['titulo'] = 'Edição dos Clientes'
         context['botao'] = 'Editar'
         return context
+    success_url = reverse_lazy('lista_cliente')
+
+#Classe exlcuir
+
+class Deletar(DeleteView):
+    model = Cliente
+    template_name = 'clientes/delete_cliente.html'
+    success_url = reverse_lazy('lista_cliente')

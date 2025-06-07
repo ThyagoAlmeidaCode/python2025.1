@@ -10,7 +10,7 @@
         {% csrf_token %}
         <!-- Primeira Linha -->
         <div class="row">
-            <div class='col-4'>
+            <div class='col'>
                 <label for="id_nome"><strong>Nome:</strong>  </label>
                  {{ form.nome }}
             </div>
@@ -19,7 +19,7 @@
                 {{ form.sobrenome  }}
 
             </div>
-            <div class='col-2'>
+            <div class='col'>
                 <label for="id_nome"><strong>CPF:</strong></label>
                 {{ form.cpf }}
             </div>         
@@ -27,7 +27,7 @@
 
         <!-- Segunda Linha -->
          <div class="row">
-            <div class='col-4'>
+            <div class='col-3'>
                 <label for="id_nome"><strong>Data de Nascimento:</strong>  </label>
                  {{ form.data_nascimento }}
             </div>
@@ -39,7 +39,7 @@
 
         <!-- Terceira Linha -->
          <div class="row">
-            <div class='col-4'>
+            <div class='col-3'>
                 <label for="id_nome"><strong>Telefone:</strong>  </label>
                  {{ form.telefone }}
             </div>
@@ -49,9 +49,9 @@
             </div>          
         </div>
 
-       <div class='row mt-3 mb-3'>
-        <div class=col-> 
-            <button class ="btn btn-secondary" type="submit">{{ botao }}</button>
+       <div class='row mt-3 mb-3 '>
+        <div class="btn-block"> 
+            <button class="btn btn-secondary " type="submit">{{ botao }}</button>
         </div>
        </div>
         

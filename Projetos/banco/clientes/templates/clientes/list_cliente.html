@@ -30,7 +30,7 @@
                 <td>{{cliente.email}}</td>
             <td>
                 <a href="{% url 'cliente_update' cliente.id %}">Editar</a>
-                <a href="">Excluir</a>
+                <a href="{% url 'cliente_excluir' cliente.id %}">Excluir</a>
             </td>
             </tr>
             {% endfor  %}

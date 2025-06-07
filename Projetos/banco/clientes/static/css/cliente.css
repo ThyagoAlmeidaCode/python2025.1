@@ -199,32 +199,19 @@ tr:nth-child(even) {
 }
 
 form{
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between;
+  display: block;
+  flex-direction:column;
+  justify-content:center;
   align-items: center;
   width: 100vw;
   height: auto;
   margin: 2rem auto;
   font-family: "Arial";
   text-align: center;
-
-}
-form input{
-	width: 20vw;
-  height: 1vh;
-  padding: 1rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: #FFFFFF;
-  color: #242D40;
-  border-radius: 10px 10px 10px 10px;
-  font-family: "Arial";
-  font-weight: 400;  
-  font-size: 14px;
-  text-align: left;
 }
 
-form button{
+
+/* form button{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,9 +226,9 @@ form button{
   color: #D9D0A3;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  outline: none; /* Remove o contorno padrão ao focar */
-  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease; /* Transições suaves */
-}
+  outline: none; /* Remove o contorno padrão ao focar 
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease; 
+}*/
 
 form button:hover {
   background-color: #3c455a; /* Cor mais escura */
