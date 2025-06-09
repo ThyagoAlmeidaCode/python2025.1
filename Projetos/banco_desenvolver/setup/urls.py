@@ -17,14 +17,33 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from clientes.views import home, Cliente_ListView, Cliente_CreateView, Cliente_UpdateView
+from clientes.views import ( 
+                            home, 
+                            Cliente_ListView, 
+                            Cliente_CreateView, 
+                            Cliente_UpdateView,
+                            BuscaCliente,
+                            LogoutCliente
+                            )
+from conta.views import DetalheContaCPF, BuscaCPFView, LogoutCPFView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     
+     
+    path('contas/busca_cpf/', BuscaCPFView.as_view(),name='buscar_cpf_form'),
+    path('contas/detalhe/<str:cpf>/', DetalheContaCPF.as_view(),name='list_contas'),
+    path('logout/', LogoutCPFView.as_view(),name='logout'),
     #class
     path('', home.as_view(), name='home'),
     path('clientes/list/', Cliente_ListView.as_view(),name='list_cliente'),
     path('clientes/create/', Cliente_CreateView.as_view(),name='create_cliente'),
     path('clientes/update/<int:pk>', Cliente_UpdateView.as_view(),name='update_cliente'),
+    
+    
+    #Path da busca e criação da
+    path('clientes/busca/', BuscaCliente.as_view(),name='search_cliente'),
+    path('clientes/busca/logout/', LogoutCliente.as_view(),name='logout_cliente'),
+   
     
 ]

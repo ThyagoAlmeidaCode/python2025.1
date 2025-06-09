@@ -1,5 +1,6 @@
 from django.db import models
 from clientes.models import Cliente
+import uuid
 # Create your models here.
 class ContaBancaria(models.Model):
     TIPO_CONTA_CHOICES = [ # Opções para o tipo de conta
@@ -13,7 +14,7 @@ class ContaBancaria(models.Model):
         related_name='contas'    # Nome para acessar as contas a partir do cliente (ex: cliente.contas.all())
     )
     
-    saldo = models.DecimalField(max_digits=10, decimal_places=2, default=0.00) # Saldo inicial 0
+    saldo = models.DecimalField(max_digits=10, decimal_places=2, default=0.00) # Saldo inicial 0    
     tipo_conta = models.CharField(max_length=2, choices=TIPO_CONTA_CHOICES, default='CC')
     data_criacao = models.DateTimeField(auto_now_add=True) # Data e hora da criação (preenchido automaticamente)
     ativa = models.BooleanField(default=True) # Indica se a conta está ativa

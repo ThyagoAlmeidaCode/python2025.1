@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+
+
+<div class="container text-center mt-3">
+   
+    <h1 class="cpf">Informe suas credenciais:</h1>
+    
+    <form action="{% url 'search_cliente' %}" method="post">
+        {% csrf_token %} 
+        <input  type="email" name="email" placeholder='email@email.com '>
+        <input  type="text" name="cpf" placeholder='Digite seu CPF'>
+        <button class="btn btn-primary" type="submit">Buscar</button>
+    </form>
+
+     {% if error_message %}
+        <div class="alert alert-danger" role="alert">
+            {{error_message}}
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}
