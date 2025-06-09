@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% block title %}Clientes{% endblock %}
+{% block content %}
+    <section>      
+        <div class="titulo"><h2>Clientes</h2></div>
+        <div ><a href="{% url 'create_cliente' %}" class="botao">Cadastrar</a></div>
+    </section>
+    <section>
+        <table>
+            <tr>
+            <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Açoes</th>
+            </tr>
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.sobrenome}}</td>
+                <td>{{cliente.cpf}}</td>
+                <td>{{cliente.data_nascimento | date:"d/m/Y"}}</td>
+                <td>{{cliente.endereco}}</td>
+                <td>{{cliente.telefone}}</td>
+                <td>{{cliente.email}}</td>
+            <td>
+                <a href="{% url 'update_cliente' cliente.id %}">Editar</a>
+                <a href="">Excluir</a>
+            </td>
+            </tr>
+            {% endfor  %}
+        </table>  
+    </section>
+
+{% endblock %}

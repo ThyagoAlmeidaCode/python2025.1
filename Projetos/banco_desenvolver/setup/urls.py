@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+<<<<<<< HEAD
 from clientes.views import ( 
                             home, 
                             Cliente_ListView, 
@@ -27,6 +28,15 @@ from clientes.views import (
                             )
 from conta.views import DetalheContaCPF, BuscaCPFView, LogoutCPFView
 
+=======
+<<<<<<< HEAD
+from clientes.views import home, Cliente_ListView, Cliente_CreateView
+from conta.views import Conta_List
+
+=======
+from clientes.views import home, Cliente_ListView, Cliente_CreateView, Cliente_UpdateView
+>>>>>>> 33ad5772fcc88c08a1e146afb1abba90c6678f28
+>>>>>>> 33e74af301a44671a54e2fb577fec148c5e424cc
 urlpatterns = [
     path('admin/', admin.site.urls),
     
@@ -38,7 +48,12 @@ urlpatterns = [
     path('', home.as_view(), name='home'),
     path('clientes/list/', Cliente_ListView.as_view(),name='list_cliente'),
     path('clientes/create/', Cliente_CreateView.as_view(),name='create_cliente'),
+<<<<<<< HEAD
+
+    path('contas/ambiente_cliente/', Conta_List.as_view(), name="Conta" )
+=======
     path('clientes/update/<int:pk>', Cliente_UpdateView.as_view(),name='update_cliente'),
+>>>>>>> 33ad5772fcc88c08a1e146afb1abba90c6678f28
     
     
     #Path da busca e criação da

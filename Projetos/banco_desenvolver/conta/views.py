@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from django.urls import reverse_lazy
 
 
@@ -63,3 +64,13 @@ class LogoutCPFView(View):
 
         messages.info(request, "Você foi desconectado.")
         return redirect('buscar_cpf_form')
+=======
+from django.views.generic import ListView,CreateView
+
+from .models import ContaBancaria
+# Create your views here.
+
+class Conta_List(ListView):
+    model = ContaBancaria
+    template_name = "contas/ambiente_conta.html"
+>>>>>>> 33e74af301a44671a54e2fb577fec148c5e424cc

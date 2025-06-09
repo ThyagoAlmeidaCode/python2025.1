@@ -1,0 +1,243 @@
+/* style.css */
+
+/* Reset básico */
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  /* Mantenha a fonte 'ADLaM Display' se você a tiver importado.
+     Caso contrário, use uma fonte padrão como 'Arial' ou 'sans-serif'. */
+  font-family: 'ADLaM Display', Arial, sans-serif;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+
+/* Css Banner */
+/* Barra superior (Barra Um) */
+.bar_um {
+  width: 100vw;
+  height: 6vh;
+  background-color: #242D40;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  
+}
+
+.bar_um h1 a{
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #C8C5D9;
+  font-family: "Arial", sans-serif; /* Adicionado sans-serif como fallback */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.banner{
+  width: 100vw;
+  height: 30vh;
+  opacity: 92%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  
+}
+
+/* Barra de navegação (Barra Dois) */
+.bar_dois {
+  width: 100vw;
+  height: 8vh;
+  background-color: #D9D0A3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* CSS Fim Banner */
+
+
+/* CSS Corpo da página*/
+
+/* ### Seçpoões Principais (Ajuste para Empilhamento) css */
+main {  
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza as sections horizontalmente */
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+}
+
+/* Estilos gerais para as sections dentro da main */
+main section {   
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: auto;  
+  font-family: "Arial";
+  margin: 1rem auto;
+}
+
+/* Estilos para o h2 dentro de main section */
+main section h2 {
+  color: #8C5B3E;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 2rem; /* Use em/rem para responsividade em relação ao tamanho da fonte base */
+}
+
+/* Estilos para o 'a' (link/botão) dentro de main section */
+main section a {  
+  display: flex;
+  justify-self: center;
+  align-items: center;  
+  width: auto; /* Largura fixa para o "botão" */
+  padding: 0.5rem ;  
+  margin: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #242D40;
+  color: #C8C5D9;
+  border-radius: 5px;
+  font-size: 1rem; /* Tamanho de fonte um pouco maior */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+main section a:hover {
+  background-color: #394357; /* Mudar a cor ao passar o mouse */
+}
+
+/* Estilos para a tabela */
+table {
+  width: 90vw; /* Define a largura da tabela, melhor usar porcentagem ou max-width */
+   /* Limita a largura máxima da tabela */
+  border-collapse: collapse; /* Colapsa as bordas das células */
+  margin: 2rem auto; /* Centraliza a tabela e adiciona margem superior/inferior */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a tabela */
+}
+
+th, td {
+  width: auto;
+  border: 1px solid #ddd; /* Adiciona bordas às células */
+  padding: 0.8rem; /* Adiciona preenchimento interno às células */
+  text-align: center; /* Alinha o texto à esquerda */
+}
+
+td a{
+  display: inline !important;
+  justify-content: center !important;
+  width: auto !important; /* Largura fixa para o "botão" */
+  padding: 0.5rem ;  
+  margin: 1rem;
+  color: #C8C5D9;
+  border-radius: 5px;
+  font-size: 0.8rem !important;  /* Tamanho de fonte um pouco maior */
+}
+
+th {
+  background-color: #A69B8D; /* Cor de fundo para os cabeçalhos */
+  color: #242D40;
+  text-align: center;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+}
+
+
+/* CSS - Home PAGE */
+
+.sou_cliente{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 15vw;
+	height: 15vh;
+	padding: 8px 8px 8px 8px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background: #242D40;
+	border-color: #FFFFFF00;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 1rem;
+  margin-top: 5rem;
+  font-size: 1rem;
+  color: #D9D0A3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+/* Formulario */
+
+.busca_cpf{
+  display:list-item;
+  flex-direction: column;
+
+  justify-content:space-between;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  margin: 2rem auto;
+  font-family: "Arial";
+  text-align: center;
+
+  h1{
+    color: #242D40;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+form{
+  display: block;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  margin: 2rem auto;
+  font-family: "Arial";
+  text-align: center;
+}
+
+
+/* form button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 6vh;
+  padding: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #242D40;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #D9D0A3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  outline: none; /* Remove o contorno padrão ao focar 
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease; 
+}*/
+
+form button:hover {
+  background-color: #3c455a; /* Cor mais escura */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra maior */
+}
+
+/* Efeito ao clicar (active) */
+form button:active {
+  background-color: #3c455a; /* Cor ainda mais escura */
+  transform: translateY(2px); /* Move o botão ligeiramente para baixo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra menor para dar a impressão de "pressionado" */
+}
