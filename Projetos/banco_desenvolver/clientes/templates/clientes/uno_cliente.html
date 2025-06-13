@@ -1,0 +1,13 @@
+{% extends 'base.html'  %}
+{% block title %}{{titulo}}{% endblock %}
+{% block content %}
+<section>
+
+
+    <h2>{{clientes.nome}}</h2>
+    <h2>{{clientes.sobrenome}}</h2>
+
+    <a href="[% url 'list_cliente' %]">Todos os Clientes</a>
+    
+</section>
+{% endblock %}

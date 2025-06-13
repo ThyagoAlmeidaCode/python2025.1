@@ -1,0 +1,17 @@
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1>Buscar Conta por CPF</h1>
+    <form method="post" action="{% url 'buscar_cpf_form' %}">
+        {% csrf_token %} {# Proteção CSRF obrigatória para formulários Django #}
+        <label for="cpf_input">Informe o CPF:</label>
+        <input type="text" id="cpf_input" name="cpf" title="O CPF deve conter 11 dígitos numéricos.">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <p><a href="">Voltar para a lista de contas</a></p>
+    {% endblock %}

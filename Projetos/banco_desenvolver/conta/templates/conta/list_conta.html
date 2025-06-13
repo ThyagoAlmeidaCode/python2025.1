@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Contas Bancárias</h1>
+
+            {# Verifica se a variável 'conta' existe e não está vazia. Isso acontece quando o CPF é encontrado. #}
+        {% if contas %}
+            <p><strong>Nome do Titular:</strong> {{ contas.cliente.nome }}</p>
+            <p><strong>CPF:</strong> {{ contas.cliente.cpf }}</p>
+            <p><strong>Número da Conta:</strong> 00{{ contas.id }}</p>           
+            <p><strong>Saldo:</strong> R$ {{ contas.saldo|floatformat:2 }}</p>
+            <p><strong>Tipo de Conta:</strong> {{ contas.tipo_conta }}</p> {# Se você tiver choices no seu modelo, use .get_FIELD_display #}
+            <p><strong>Cliente desde:</strong> {{ contas.data_criacao|date:"m/Y" }}</p>
+            {# Adicione mais campos aqui conforme a estrutura do seu modelo ContaBancaria #}
+
+        {% else %}
+            {# Esta mensagem é exibida se a view não conseguir encontrar uma conta para o CPF (embora get_object_or_404 geralmente lide com isso) #}
+            <p class="error-message">Nenhuma conta encontrada para o CPF informado.</p>
+        {% endif %}
+
+
+
+{% endblock %}
