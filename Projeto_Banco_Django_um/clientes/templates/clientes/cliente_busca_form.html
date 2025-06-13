@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Informe suas Credenciais</h1>
+        <form action="{% url 'busca_cliente'  %}" method="post">
+            {% csrf_token %} <!-- Criptografa os dados do formulario -->
+            <input type="email" name="email" placeholder="email@email.com">
+            <input type="text" name="cpf" placeholder="Informe o cpf">
+            <button class="btn btn-primary"  type="submit">Acesso</button>
+        </form>
+    </div>
+
+    <hr>
+    <h1>{{ title }}</h1>
+    <p>Nome: {{ cliente.nome }} {{ cliente.sobrenome }}</p>
+
+
+    {% if mensagem  %}
+    <div class="alert alert-danger" role="alert">
+        <p> {{ mensagem }}</p> <!-- Uso do conceito context -->
+    </div>      
+    {% endif %}
+{% endblock %}
